@@ -1,2 +1,9 @@
-a = 3
-b = 4
+grade = 'B'
+match grade:
+    case 'A'|'B'|'C':
+        print("Pass")
+    case _:
+        print("Fail")
+
+
+
