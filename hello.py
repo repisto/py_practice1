@@ -1,7 +1,32 @@
 # hello.py
-with open("한글파일.txt","w",encoding="utf-8") as f:
-    f.write("안녕하세요, 파이썬!")
-
-with open("한글파일.txt","r",encoding="utf-8") as f:
-    content = f.read()
-    print(content)
+class FourCal:
+    def __init__(self,first,second):
+        self.first = first
+        self.second = second
+    def setdata(self, first, second):
+        self.first = first
+        self.second = second
+    def add(self):
+        result = self.first + self.second
+        return result
+    def mul(self):
+        result = self.first * self.second
+        return result
+    def sub(self):
+        result = self.first - self.second
+        return result
+    def div(self):
+        result = self.first / self.second
+        return result
+class MoreFourCal(FourCal):
+    def pow(self):
+        result = self.first ** self.second
+        return result
+class SafeFourCal(FourCal):
+    def div(self):
+        if self.second == 0:
+            return 0
+        else:
+            return self.first / self.second
+class Family:
+    lastname = "Kim"

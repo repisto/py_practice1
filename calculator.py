@@ -1,14 +1,10 @@
 # calculator.py
-print("===simple calculator===")
+result = 0
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+def add(num):
+    global result
+    result += num
+    return result
 
-print(f"{num1} + {num2} = {num1+num2}")
-print(f"{num1} - {num2} = {num1-num2}")
-print(f"{num1} * {num2} = {num1*num2}")
-
-if num2 != 0:
-    print(f"{num1} / {num2} = {num1/num2}")
-else:
-    print("We can't divide by zero.")
+print(add(3))
+print(add(4))
