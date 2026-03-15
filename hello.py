@@ -1,16 +1,7 @@
 # hello.py
-def add(a,b):
-    """
-    function adding two numbers.
+with open("한글파일.txt","w",encoding="utf-8") as f:
+    f.write("안녕하세요, 파이썬!")
 
-    Parameters:
-    a(int,float): first number 
-    b(int, float): second number
-
-    Returns:
-    int, float: sum of two numbers
-    """
-    return a + b
-
-# confirm Docstring
-print(add.__doc__)
+with open("한글파일.txt","r",encoding="utf-8") as f:
+    content = f.read()
+    print(content)
